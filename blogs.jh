@@ -1,0 +1,22 @@
+entity Zonal {
+    name String required
+   date Instant,
+    
+}
+entity Sector {
+   name String required,
+   date Instant,
+   content String,
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToMany {
+	Zonal{zonalSector} to Sector{zonal(name)}
+}
+
+paginate Sector with pagination
+dto * with mapstruct
+service all with serviceImpl

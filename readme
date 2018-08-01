@@ -1,0 +1,4 @@
+Created the Application in Jhipster and Created the Entity and RElation and imported the same using jdl import command:
+
+i) yo-jhipster:import-jdl filename.jh
+ii) yo-jhipster:entity

@@ -1,0 +1,33 @@
+{
+    "name": "Zonal",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "zonalSector",
+            "otherEntityName": "sector",
+            "otherEntityRelationshipName": "zonal"
+        }
+    ],
+    "changelogDate": "20180731035614",
+    "entityTableName": "zonal",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

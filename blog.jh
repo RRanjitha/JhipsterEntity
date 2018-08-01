@@ -1,0 +1,20 @@
+																																											entity Category {
+	name String required
+    
+}
+entity Blog {
+   name String required,
+   content String,
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToMany {
+	Category{categoryBlog} to Blog{category(name)}
+}
+
+paginate Blog with pagination
+dto * with mapstruct
+service all with serviceImpl

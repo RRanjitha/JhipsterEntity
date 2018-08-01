@@ -1,0 +1,48 @@
+entity Zonal {
+    zonal_name String,
+    zonal_address String,
+    zonal_incharge Integer,
+    created_at Timestamp,
+    update_at Timestamp
+    
+}
+entity Sector {
+    id Integer,
+	sector_name String,
+    sector_address String,
+    sector_incharge Integer,
+    created_at Timestamp,
+    update_at Timestamp
+}
+
+entity Nursery {
+	id Integer,
+	nursery_name String,
+    nursery_address String,
+    nursery_incharge Integer,
+    created_at Timestamp,
+    update_at Timestamp
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Sector{sector} to Zonal
+}
+
+relationship ManyToOne {
+	Zonal{zonal} to Sector
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Nursery{nursery} to Sector
+}
+
+relationship ManyToOne {
+	Sector{sector} to Nursery
+}
